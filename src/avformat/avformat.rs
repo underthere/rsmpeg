@@ -278,8 +278,8 @@ impl AVFormatContextOutput {
         unsafe {
             ffi::avformat_alloc_output_context2(
                 &mut output_format_context,
-                ptr::null_mut(),
                 fmt,
+                ptr::null_mut(),                
                 filename.as_ptr(),
             )
         }
